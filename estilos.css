@@ -1,0 +1,308 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	scroll-behavior: smooth;	
+}
+
+body {
+	font-family: 'Montserrat', sans-serif;
+	background: #e0e0e0;
+	color: #1d1d1d;
+	padding: 90px 0px 0;
+	padding-top: 0;
+	background: #121128;
+	
+}
+
+.header{
+	background-color: #5361FF;
+	height: 80px;
+	position: sticky;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	margin-top: auto;
+}
+
+.titulo {
+	display: flex;
+    justify-content: center;
+    font-size: 27px;
+	margin-top: 10px;
+	color: white;
+}
+
+.nav{
+	display: flex;
+	justify-content: space-between;
+	max-width: 992px;
+	margin: 0 auto;
+}
+
+.nav-link{
+	color: white;
+	text-decoration: none;
+}
+
+.logo{
+	font-size: 30px;
+	font-weight: bold;
+	padding: 0 40px;
+	line-height: 80px;
+}
+
+.nav-list{
+	display: flex;
+	margin-right: 40px;
+	list-style: none;
+}
+
+.nav-menu{
+	font-size: 18px;
+	margin: 0 10px;
+	line-height: 80px;
+	text-transform: uppercase;
+	width: max-content;
+}
+
+.nav-item{
+	padding: 8px 12px;
+	border-radius: 3px;
+}
+
+.nav-item:hover{
+	background: #000000;
+	transition: 0.5s;
+}
+
+.nav-toggle{
+	color: white;
+	background: none;
+	border: none;
+	font-size: 30px;
+	padding: 0 20px;
+	line-height: 60px;
+
+	display: none;
+}
+
+.descripcion{
+    position: relative;
+    overflow: hidden;
+}
+
+.descripcion img{
+    border-radius: 15px;
+}
+
+.descripcion-link{
+    position: absolute;
+    bottom: -100%;
+    width: 100%;
+    height: 100%;
+	display: grid;
+    align-content: space-evenly;
+    padding: 20px;
+    background-color: rgba(255,255,255,.3);
+    border-radius: 15px;
+    cursor: pointer;
+    backdrop-filter: blur(10px);
+	transition: 0.3s;
+}
+
+.descripcion:hover .descripcion-link{
+    bottom: 0;
+}
+
+.descripcion-name{
+    color:black;
+	padding: 10px;
+}
+
+.contenedor {
+	width: 90%;
+	max-width: 1000px;
+	margin: 40px auto 100px auto;
+	display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+}
+
+.contenedor .pelicula {
+	text-align: center;
+}
+
+.contenedor .pelicula .titulo {
+	font-size: 16px;
+	font-weight: 600;
+}
+
+.contenedor .pelicula .poster {
+	width: 100%;
+	margin-bottom: 10px;
+	border-radius: 15px;
+}
+
+.btnUp {
+	position: fixed;
+    width: 70px;
+    height: 70px;
+    background: #5361FF;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    border-radius: 15px;
+    bottom: 80px;
+    right: 20px;
+	cursor: pointer;
+	transform: translateX(100px);
+	transition: 0.5s;
+}
+
+.btnUp-on{
+	transform: translateX(0);
+}
+
+.btnUp:hover {
+	background-color: black;
+	transition: 0.5s;
+}
+
+.paginacion {
+	bottom: 0;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	gap: 20px;
+	padding: 10px;
+}
+
+.paginacion button {
+	cursor: pointer;
+	border: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	height: 50px;
+	width: 200px;
+	background: #5361FF;
+	color: #fff;
+	border-radius: 100px;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 600;
+	transition: .3s ease all;
+}
+
+.paginacion button:hover {
+	background: black;
+}
+
+@media (max-width: 768px) {
+	body {
+		font-family: 'Montserrat', sans-serif;
+		background: #e0e0e0;
+		color: #1d1d1d;
+		padding-top: 0;
+	}
+	
+	.header{
+		height: 60px;
+	}
+	
+	.logo{
+		font-size: 25px;
+		padding: 0 20px;
+		line-height: 60px;
+	}
+	
+	.nav-list{
+		flex-direction: column;
+		align-items: center;
+		margin: 0px;
+		background-color: #ffffff4d;
+		transition: left 0.3s;
+		backdrop-filter: blur(10px);
+		position: fixed;
+		left: 0;
+		top: 60px;
+		width: 100%;
+		padding: 20px 0;
+		height: calc(100% - 60px);
+		overflow-y: auto;
+		left: 100%;
+	}
+	
+	.nav-menu{
+		line-height: 70px;
+	}
+	
+	.nav-item:hover {
+		cursor: pointer;
+		background: none;
+		color: #5361FF;
+	}
+
+	.nav-link{
+		color: white;
+		text-decoration: none;
+	}
+	
+	.nav-toggle{
+		display: block;
+		color: 	white;
+		cursor: pointer;
+	}
+
+	.nav-list_visible {
+		left: 0%;
+	}
+
+	.ok{
+		font-size: 18px;
+		margin-top: 10px;
+	}
+	
+	.contenedor {
+		width: 90%;
+		max-width: 1000px;
+		margin: 40px auto 100px auto;
+		margin-top: 10px;
+		display: grid;
+		grid-template-columns: auto;
+	}
+
+	.contenedor .pelicula {
+		text-align: center;
+	}
+
+	.contenedor .pelicula .titulo {
+		font-size: 16px;
+		font-weight: 600;
+	}
+	
+	.contenedor .pelicula .poster {
+		width: 100%;
+		margin-bottom: 10px;
+		border-radius: 15px;
+	}
+	
+	.btnUp{
+		height: 60px;
+    	width: 60px;
+    	bottom: 80px;
+    	right: 10px;
+	}
+	
+	.paginacion {
+		bottom: 0;
+		width: 100%;
+		display: flex;
+		gap: 20px;
+		padding: 10px;
+	}
+}

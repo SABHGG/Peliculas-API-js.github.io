@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/2d90f4032e.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="estilos.css">
+	<title>Sitio de peliculas con API</title>
+</head>
+<body>
+	<header class="header">
+		<nav class="nav">
+			<div>
+				<a href="#" class="logo nav-link">Peliculas API</a>
+			</div>
+			
+			<div class="nav__menu" id="nav-menu">
+				<ul class="nav-list">
+					<li id="popular"class="nav-menu" ><a href="#" class="nav-item nav-link">Popular</a></li>
+					<li id="top-rated"class="nav-menu"><a href="#" class="nav-item nav-link">Mejor calificado</a></li>
+					<li id="now-playing" class="nav-menu"><a href="#" class="nav-item nav-link">En cartelera</a></li>
+				</ul>	
+			</div>
+
+			<button id="btnMenu" class="nav-toggle">
+				<i class="fa-solid fa-bars"></i>
+			</button>
+		</nav>
+	</header>
+
+	<div class="titulo">
+		<h1 id="titulo">Peliculas Populares</h1>
+	</div>
+
+	<div class="contenedor" id="contenedor">
+
+	</div>
+	
+	<div class="btnUp" id="btnUp">
+		<i class="fa-solid fa-chevron-up"></i>
+	</div>
+
+	<div class="paginacion">
+		<button id="btnAnterior">Anterior</button>
+		<button id="btnSiguiente">Siguiente</button>
+	</div>
+	
+	<script src="app.js"></script>
+</body>
+</html>
