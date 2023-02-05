@@ -70,8 +70,7 @@ btnAnterior.addEventListener('click', () => { // agregamos evento de click
 const cargarPeliculas = async() => {
 	try {
 		const respuesta = await fetch(`https://api.themoviedb.org/3/movie/${modo}?api_key=c00f382998383a79b298de3f48d0d5cf&language=es-MX&page=${pagina}`);
-	
-		// Si la respuesta es correcta
+
 		if(respuesta.status === 200){
 			const datos = await respuesta.json();
 
